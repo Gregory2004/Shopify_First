@@ -71,8 +71,7 @@ let radioBatonchik = () => {
   })
 }
 
-const addToBasketButton = document.querySelector('.add-to-basket');
-let timeout;
+
 
 
 radioBatonchik()
