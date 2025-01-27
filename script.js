@@ -74,11 +74,7 @@ let radioBatonchik = () => {
 const addToBasketButton = document.querySelector('.add-to-basket');
 let timeout;
 
-function startAnimation() {
-    timeout = setTimeout(() => {
-    }, 1000);
-}
-startAnimation()
+
 radioBatonchik()
 checkOpenSidebar()
 checkBasketQuantity()
