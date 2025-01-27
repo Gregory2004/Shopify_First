@@ -75,7 +75,6 @@ const addToBasketButton = document.querySelector('.add-to-basket');
 let timeout;
 
 function startAnimation() {
-    addToBasketButton.style.animationDelay = '0s'; 
     timeout = setTimeout(() => {
     }, 1000);
 }
