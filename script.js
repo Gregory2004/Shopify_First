@@ -62,7 +62,25 @@ function checkOpenSidebar() {
   }
 }
 
+let radioBatonchik = () => {
+  const radioButtons = document.querySelectorAll('.radio-button input[type="radio"]');
+  radioButtons.forEach(element => {
+    if(element.classList.contains('checked')){
+      element.style.backgroundColor = 'red'
+    }
+  })
+}
 
+const addToBasketButton = document.querySelector('.add-to-basket');
+let timeout;
+
+function startAnimation() {
+    addToBasketButton.style.animationDelay = '0s'; 
+    timeout = setTimeout(() => {
+    }, 1000);
+}
+startAnimation()
+radioBatonchik()
 checkOpenSidebar()
 checkBasketQuantity()
 plusAndMinus()
