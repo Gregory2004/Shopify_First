@@ -1,5 +1,5 @@
 html {
-    height: 100%;
+    height: 100%
 }
 
 body {
@@ -9,87 +9,78 @@ body {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 .glass {
     position: fixed;
-    /* Фиксируем поверх всего документа */
     top: 0;
     left: 0;
     width: 100%;
-    /* Покрываем всю ширину экрана */
     height: 100%;
-    /* Покрываем всю высоту экрана */
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Полупрозрачный черный цвет */
+    background-color: rgb(0 0 0 / .5);
     z-index: 1;
     display: none;
-    pointer-events: none;
+    pointer-events: none
 }
 
 .glass.activated {
-    display: block;
+    display: block
 }
 
 .container {
     max-width: 1400px;
-    margin: 0 auto;
+    margin: 0 auto
 }
-
-/* Карусель */
 
 .marquee-wrapper {
     display: flex;
     overflow: hidden;
     align-items: center;
     width: 100vw;
-    background-color: rgb(255, 182, 205);
-    color: white;
-    padding: 30px 0;
+    background-color: #ffb6cd;
+    color: #fff;
+    padding: 30px 0
 }
 
 .marquee-content {
     display: flex;
-    animation: marquee 10s linear infinite;
+    animation: marquee 10s linear infinite
 }
 
 .marquee-content p {
     margin: 0 3vw;
-    white-space: nowrap;
+    white-space: nowrap
 }
 
 @keyframes marquee {
     0% {
-        transform: translateX(0);
+        transform: translateX(0)
     }
 
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-100%)
     }
 }
 
 .marquee-wrapper .marquee-content:first-child {
-    animation-delay: 0s;
+    animation-delay: 0s
 }
 
 .marquee-wrapper .marquee-content:last-child {
-    animation-delay: -5s;
+    animation-delay: -5s
 }
-
 
 .marquee-wrapper .marquee-content:first-child {
-    animation-delay: 0s;
+    animation-delay: 0s
 }
 
 .marquee-wrapper .marquee-content:last-child {
-    animation-delay: -5s;
+    animation-delay: -5s
 }
 
-
-/* HEADER */
 header {
-    border-bottom: 1px solid rgb(235, 235, 235);
+    border-bottom: 1px solid #ebebeb
 }
 
 .navbar {
@@ -97,36 +88,34 @@ header {
     gap: 120px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .active {
-    background-color: rgb(255, 182, 205);
+    background-color: #ffb6cd;
     color: white !important;
-    border-radius: 4px;
+    border-radius: 4px
 }
 
 .navbar ul {
     padding-left: 0;
     display: flex;
     justify-content: start;
-    list-style: none;
+    list-style: none
 }
 
 .navbar ul li {
-    margin: 0 5px;
+    margin: 0 5px
 }
 
 .navbar ul li a {
-
     padding: 4px 10px;
     text-decoration: none;
-    color: black;
+    color: #000
 }
 
 .navbar-icons {
-    margin-right: 55px;
-
+    margin-right: 55px
 }
 
 .navbar-icons * {
@@ -134,39 +123,33 @@ header {
     border: none;
     background-color: #fff;
     height: 20px;
-    padding: 0 5px;
+    padding: 0 5px
 }
 
-/* SIDEBAR */
-/* Стили для сайдбара */
 .sidebar {
     z-index: 2;
     position: fixed;
-    /* Фиксируем сайдбар поверх всего документа */
     top: 0;
     right: -250px;
-    /* Скрываем сайдбар слева */
     width: 250px;
     height: 100%;
-    background-color: #ffffff;
-    color: white;
+    background-color: #fff;
+    color: #fff;
     padding-top: 60px;
-    /* Отступ сверху для контента */
-    transition: 0.1s;
-    /* Плавное открытие/закрытие */
+    transition: 0.1s
 }
 
 .sidebar ul {
     list-style-type: none;
-    padding: 0;
+    padding: 0
 }
 
 .sidebar ul li a {
     text-decoration: none;
-    color: white;
+    color: #fff;
     display: block;
     padding: 10px 15px;
-    font-size: 18px;
+    font-size: 18px
 }
 
 .sidebar .close-btn {
@@ -174,58 +157,53 @@ header {
     top: 20px;
     right: 25px;
     font-size: 36px;
-    background-color: transparent;
+    background-color: #fff0;
     border: none;
-    color: white;
-    cursor: pointer;
+    color: #fff;
+    cursor: pointer
 }
 
 .sidebar.open {
-    right: 0;
-    /* При добавлении класса "open" сайдбар будет видим */
+    right: 0
 }
 
-/* Стили для кнопки открытия */
 .open-btn {
     position: absolute;
     top: 20px;
     left: 20px;
     padding: 10px;
     background-color: #111;
-    color: white;
+    color: #fff;
     border: none;
-    cursor: pointer;
+    cursor: pointer
 }
 
-
-/* MAIN */
 .main-content {
-
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .main-content-image img {
     width: 700px;
     margin-top: 30px;
-    border-radius: 15px;
+    border-radius: 15px
 }
 
 .main-content-text {
     width: 350px;
-    margin-right: 280px;
+    margin-right: 280px
 }
 
 .main-content-text h1 {
     margin-bottom: 0;
     font-size: 55px;
-    font-weight: 500;
+    font-weight: 500
 }
 
 .main-content-text h2 {
     margin: 0;
     font-size: 65px;
-    font-weight: 900;
+    font-weight: 900
 }
 
 .prices {
@@ -233,7 +211,7 @@ header {
     height: 30px;
     width: 225px;
     display: inline-flex;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .prices div {
@@ -245,61 +223,61 @@ header {
     height: 15px;
     display: flex;
     align-items: center;
-    background-color: black;
-    color: white;
-    display: flex;
+    background-color: #000;
+    color: #fff;
+    display: flex
 }
 
 .prices h3 {
-    margin: 0;
+    margin: 0
 }
 
 .prices h3:first-child {
     font-size: 25px;
-    color: rgb(255, 182, 205);
+    color: #ffb6cd
 }
 
 .dashed {
     text-decoration: line-through;
     display: flex;
-    align-items: center;
+    align-items: center
 }
 
 .addtobasket {
     cursor: pointer;
     margin-top: 20px;
-    background-color: rgb(255, 182, 205);
+    background-color: #ffb6cd;
     border: none;
     white-space: nowrap;
     padding: 15px 120px;
     font-size: 20px;
     border-radius: 6px;
-    color: white;
-    font-weight: bold;
-    transition: 0.1s transform;
+    color: #fff;
+    font-weight: 700;
+    transition: 0.1s transform
 }
 
 .addtobasket:hover {
-    transform: scale(100.5%);
+    transform: scale(100.5%)
 }
 
 .main-content-text a {
     display: inline-block;
     margin-top: 40px;
-    text-decoration: none;
+    text-decoration: none
 }
 
 .main-content-text a:hover {
-    text-decoration: underline;
+    text-decoration: underline
 }
 
 main {
-    flex: 1;
+    flex: 1
 }
 
 .quantity {
     display: flex;
-    margin-top: 20px;
+    margin-top: 20px
 }
 
 .quantity::placeholder {
@@ -309,34 +287,33 @@ main {
 .quantity input {
     padding: 10px 10px;
     width: 60px;
-    border-top: 1px solid rgb(174, 174, 174);
+    border-top: 1px solid #aeaeae;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid rgb(174, 174, 174);
-    text-align: center;
+    border-bottom: 1px solid #aeaeae;
+    text-align: center
 }
 
 .quantity input:focus {
-    outline: none;
+    outline: none
 }
 
 .quantity input::-webkit-inner-spin-button,
 .quantity input::-webkit-outer-spin-button {
     -webkit-appearance: none;
-    margin: 0;
+    margin: 0
 }
 
 .quantity button {
     cursor: pointer;
-    background-color: rgb(255, 255, 255);
-    color: black;
-    font-weight: bold;
+    background-color: #fff;
+    color: #000;
+    font-weight: 700
 }
 
 .plus,
 .minus {
-
-    border: 1px solid rgb(174, 174, 174);
+    border: 1px solid #aeaeae
 }
 
 .plus {
@@ -346,92 +323,89 @@ main {
     font-size: 20px;
     margin-left: -4px;
     border-left: none;
-    border-radius: 0 15px 15px 0;
+    border-radius: 0 15px 15px 0
 }
 
 .minus {
     padding: 10px 20px;
     margin-right: -4px;
     border-radius: 15px 0 0 15px;
-    border-right: none;
+    border-right: none
 }
 
 .plus:hover,
 .minus:hover {
-    background-color: rgba(255, 182, 205, 0.156);
+    background-color: rgb(255 182 205 / .156)
 }
 
-/* FOOTER */
 .footer {
     height: 500px;
     margin-top: 30px;
-    background-color: rgb(255, 182, 205);
-    color: white;
+    background-color: #ffb6cd;
+    color: #fff
 }
 
 .footer-content {
     gap: 260px;
     display: flex;
-    justify-content: start;
+    justify-content: start
 }
 
 .footer-content-links {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    color: rgb(rgb(107, 66, 255), green, blue);
+    color: rgb(#6b42ff, green, blue)
 }
 
 .footer-content-links a {
     text-decoration: none;
-    color: white;
+    color: #fff
 }
 
-
 .footer-content-links a:hover {
-    text-decoration: underline;
+    text-decoration: underline
 }
 
 .footer-content-text {
-    width: 350px;
+    width: 350px
 }
 
 .footer-content-text p {
-    line-height: 30px;
+    line-height: 30px
 }
 
 label {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 20px
 }
 
 label input {
     width: 290px;
     transition: 0.1s border;
-    background-color: transparent;
+    background-color: #fff0;
     padding: 12px 40px;
     outline: none;
     border-radius: 5px;
-    border: 0.1px solid rgb(254, 220, 228);
-    color: white;
+    border: .1px solid #fedce4;
+    color: #fff
 }
 
 label input::placeholder {
     transition: transform 0.1s;
     letter-spacing: 1px;
     font-size: 15px;
-    color: white;
+    color: #fff
 }
 
 label input:focus::placeholder {
-    transform: translateX(-40px) translateY(-12px) scale(0.85);
-    /* уменьшите смещение */
+    transform: translateX(-40px) translateY(-12px) scale(.85)
 }
 
 label input:focus {
-    border: 1px solid white;
+    border: 1px solid #fff
 }
 
 label button {
@@ -440,36 +414,30 @@ label button {
     padding: 12px 40px;
     border: none;
     border-radius: 5px;
-    color: rgb(255, 182, 205);
-    font-weight: bold;
-    font-size: 17px;
+    color: #ffb6cd;
+    font-weight: 700;
+    font-size: 17px
 }
 
 .companies {
-    margin-top: 40px;
+    margin-top: 40px
 }
 
 .companies p {
-    text-align: center;
+    text-align: center
 }
 
-
-
-
-
-
-/* PAGE 2 */
 .pinked {
     padding: 5px 0;
     text-align: center;
-    border: 1px solid rgb(255, 182, 205);
-    color: rgb(255, 182, 205);
-    width: 380px;
+    border: 1px solid #ffb6cd;
+    color: #ffb6cd;
+    width: 380px
 }
 
 .buynow-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .buynow-content-text {
@@ -478,23 +446,23 @@ label button {
     align-items: center;
     margin-top: 50px;
     margin-right: 180px;
-    width: 450px;
+    width: 450px
 }
 
 .buynow-content-text h1 {
     margin-top: 0;
     text-align: center;
-    white-space: nowrap;
+    white-space: nowrap
 }
 
 .stars img {
-    height: 30px;
+    height: 30px
 }
 
 .stars p {
     font-size: 15px;
-    color: rgb(153, 153, 153);
-    padding-top: 5px;
+    color: #999;
+    padding-top: 5px
 }
 
 .stars {
@@ -503,39 +471,39 @@ label button {
     width: 120px;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: start
 }
 
 .buynow-prices {
     gap: 20px;
-    margin-left: -223px;
+    margin-left: -223px
 }
 
 .buynow-prices div {
-    white-space: nowrap;
+    white-space: nowrap
 }
 
 .text-line-wrapper {
     margin-top: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .line {
     width: 100px;
     flex: 1;
     height: 3px;
-    background-color: black;
+    background-color: #000
 }
 
 .text {
     margin: 0 10px;
-    font-weight: bold;
-    white-space: nowrap;
+    font-weight: 700;
+    white-space: nowrap
 }
-.radio-button { 
-    
+
+.radio-button {
     padding-left: 10px;
     position: relative;
     display: flex;
@@ -548,133 +516,227 @@ label button {
     width: 430px;
     height: 80px;
     background-color: #f8f8f8;
-    margin-bottom: 10px; 
-    position: relative; 
-    font-size: 14px; 
-  }
-  
-  .radio-button input[type="radio"] {
+    margin-bottom: 10px;
+    position: relative;
+    font-size: 14px
+}
+
+.radio-button input[type="radio"] {
     position: absolute;
-    top: 32px; /* Абсолютное позиционирование */
+    top: 32px;
     margin: 0;
     width: 10px;
     outline: none;
     height: 16px;
     border: 1px solid #777;
     border-radius: 50%;
-    cursor: pointer;
-  }
-  .radio-button input[type="radio"]:checked { /* Выбираем span после выбранной радиокнопки */
-    background-color: #e5e5e5; /* Стилизуем span */
-  }
-  .radio-button input[type="radio"]:checked::before {
+    cursor: pointer
+}
+
+.radio-button input[type="radio"]:checked {
+    background-color: #e5e5e5
+}
+
+.radio-button input[type="radio"]:checked::before {
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 10px; /* Размер "точки" */
+    width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: rgb(0, 0, 0); /* Цвет "точки" при выборе */
-  }
-  .radio-button:hover {
-    border: 2px solid black;
-    background-color: rgb(217,217,217); /* Изменение фона при наведении */
-  }
-  .radio-button:has(input[type="radio"]:checked) { /* для новых браузеров */
-    background-color: rgb(229,229,229);
-    border: 3px solid black;
-  }
-  .price {
-    font-weight: bold;
-    white-space: nowrap; 
-  }
-  
-  .old-price {
+    background-color: #000
+}
+
+.radio-button:hover {
+    border: 2px solid #000;
+    background-color: #d9d9d9
+}
+
+.radio-button:has(input[type="radio"]:checked) {
+    background-color: #e5e5e5;
+    border: 3px solid #000
+}
+
+.price {
+    font-weight: 700;
+    white-space: nowrap
+}
+
+.old-price {
     text-decoration: line-through;
     color: #999;
-    font-size: 12px; 
-    white-space: nowrap; 
-  }
-  
-  .additional-text {
+    font-size: 12px;
+    white-space: nowrap
+}
 
+.additional-text {
     margin-top: 10px;
     font-size: 10px;
-    white-space: nowrap;
-  }
-  
-  .popular {
-    border-color: #ddd;
-  }
-  
-  .popular-label {
+    white-space: nowrap
+}
+
+.popular {
+    border-color: #ddd
+}
+
+.popular-label {
     position: absolute;
     top: -10px;
     right: 10px;
     background-color: #ffb6c1;
-    color: white;
+    color: #fff;
     padding: 6px 10px;
     border-radius: 3px;
     font-size: 12px;
-    font-weight: bold;
-    transform: rotate(5deg);
-    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.2);
-  }
-  .popular-label .star {
-    color: gold;
-    font-size: 14px;
-  }
-  .eli{
     font-weight: 700;
-  }
-  .mihat{
+    transform: rotate(5deg);
+    box-shadow: 4px 5px 5px rgb(0 0 0 / .2)
+}
+
+.popular-label .star {
+    color: gold;
+    font-size: 14px
+}
+
+.eli {
+    font-weight: 700
+}
+
+.mihat {
     display: flex;
     flex-direction: column;
-    margin-left: 30px;
-  }
+    margin-left: 30px
+}
 
-  .add-to-basket {
+.add-to-basket {
     margin-top: 20px;
+    margin-bottom: 20px;
     background-color: #ffb6c1;
-    font-weight: bold;
+    font-weight: 700;
     text-transform: uppercase;
     padding: 18px 60px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    color: white;
+    color: #fff;
     animation-name: shake;
     animation-duration: 1s;
-    animation-timing-function: ease-in-out; /* Анимация выполняется один раз */
+    animation-timing-function: ease-in-out
 }
 
 .add-to-basket:hover {
     animation: none;
     transform: scale(101%);
-    background-color: #ffb6c1;
+    background-color: #ffb6c1
 }
 
 @keyframes shake {
-    0%, 100% {
-        transform: translateX(0);
+
+    0%,
+    100% {
+        transform: translateX(0)
     }
+
     25% {
-        transform: translateX(-5px);
+        transform: translateX(-5px)
     }
+
     50% {
-        transform: translateX(5px);
+        transform: translateX(5px)
     }
+
     75% {
-        transform: translateX(-5px);
+        transform: translateX(-5px)
     }
 }
 
-.pieceofshit{
+.pieceofshit {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 15px;
+    margin-right: 15px
+}
+
+.carousel {
+    justify-content: space-between;
+    width: 100%;
+    display: flex
+}
+
+.carousel img {
+    cursor: pointer;
+    height: 100px;
+    width: 100px
+}
+
+
+/* contacts */
+.small-container {
+    text-align: center;
+    width: 700px;
+    display: block;
+    margin: 0 auto;
+
+}
+.contacts-text h1{
+    margin: 0 auto 30px;
+    width: 600px;
+    font-weight: 900;
+    font-size: 50px;
+}
+.contacts-text p{
+    color: rgb(126, 126, 126);
+    letter-spacing: 1.5px;
+    line-height: 30px;
+    font-size: 13px;
+    margin: 0 auto;
+    text-align: center;
+    width: 700px;
+}
+.pink{
+    color: rgb(255, 182, 205);
+}
+.contacts-inputs{
+    display: flex;
+    flex-direction: column;
+}
+.contacts-inputs div{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.contacts-inputs div input,.contacts-inputs input{
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding:10px 20px;
+}
+.contacts-inputs .telephone{
+    width: 400px;
+    margin: 0 auto;
+}
+.contacts-inputs textarea{
+    background-color: #f0f0f0;
+    width: 435px;
+    margin:20px  auto 30px;
+}
+.contacts-inputs button{
+    margin:auto;
+    padding: 10px 20px;
+    width: 140px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    background-color:rgb(255, 182, 205);
+    transition: transform 0.2s;
+}
+.contacts-inputs button:hover{
+    transform: scale(95%);
+}
+.contacts-inputs button:active{
+    transform: scale(80%);
 }
