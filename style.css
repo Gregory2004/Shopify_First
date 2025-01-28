@@ -740,3 +740,44 @@ label button {
 .contacts-inputs button:active{
     transform: scale(80%);
 }
+
+/* contact */
+.contact-main{
+    display: block;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    width: 500px;
+    margin: auto;
+}
+
+.contact-main h1{
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.contact-main p{
+    font-size: 13px;
+    color: #777;
+    padding: 10px 0 0;
+}
+
+/* shipping */
+.shipping-main{
+    width: 500px;
+    margin: auto;
+    padding-bottom: 50px;
+}
+.shipping-main h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 60px;
+}
+.shipping-main p{
+    font-size: 13px;
+    padding-top: 10px;
+}
+.shipping-main span{
+    font-weight: 900;
+    font-size: 20px;
+}
